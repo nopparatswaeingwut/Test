@@ -13,6 +13,7 @@
             <div v-if="this.dataSets.length > 0">
             <img src="/product.jpg" class="imageProduct" alt="Product Image">
             <p>Label: {{ machine.Tagname }}</p>
+            <GaugeChart  class="imageProduct" :data="[randomNumber]" />
             <p>Gauge Speed:  {{ randomNumber }}</p>
             <p class="Detail">Details</p>
             <div >
@@ -29,8 +30,8 @@
           <td class="storage-area">
             <h2>Storage Area</h2>
             <div v-if="this.dataSets.length > 0">
-            <img src="/product.jpg" class="imageProduct" alt="Product Image">
-            <p class="">Storage Label: {{ machine.Material }}</p>
+            <GaugeChartArea  class="imageProduct" :dataArea="this.machine.Material" />
+            <p class="pt-5">Storage Label: {{ machine.Material }}</p>
             <p>Storage Level: {{ machine.Act_Inv }}</p>
             </div>
             <div v-else>
@@ -40,11 +41,18 @@
         </tr>
       </tbody>
     </table>
+
   </div>
 </template>
 
 <script>
+import GaugeChart from '../components/GaugeChart'
+import GaugeChartArea from '../components/GaugeChartArea'
 export default {
+  components: {
+    GaugeChart,
+    GaugeChartArea
+  },
   data() {
     return {
       machine: {},
@@ -86,7 +94,7 @@ export default {
 
     data() {
       return this.dataSets[this.currentDataSetIndex];
-    }
+    },
   },
   methods: {
     updateDashboard() {
@@ -153,15 +161,21 @@ td {
   width: 30%;
   height: auto;
 }
+.storage-area{
+  width: 40%;
+  height: auto;
+}
+
 
 h2 {
   text-align: center;
-  color: #fff;
+  color: #000000;
 }
 
-.machine-details, .storage-details {
-  background-color: #555;
-  color: #fff;
+.machine-details, .storage-area {
+  background-color: #fff;
+  color: #000000;
+
 }
 .Detail {
   font-weight: bold;
