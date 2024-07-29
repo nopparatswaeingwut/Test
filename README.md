@@ -19,4 +19,4 @@ $ npm run generate
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/2e76bcae-8810-4779-b68b-376898453158)
