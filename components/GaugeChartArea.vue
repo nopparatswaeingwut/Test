@@ -33,7 +33,7 @@ export default {
       plugins: {
         legend: {
           labels: {
-            color: 'white' // Change legend label color to white
+            color: 'white'
           }
         },
         tooltip: {
@@ -44,17 +44,17 @@ export default {
               return `${label}: ${value}`;
             }
           },
-          // Change tooltip text color to white
+
           bodyColor: 'white',
           titleColor: 'white'
         }
       },
-      // Option for customizing chart appearance
+
       responsive: true,
       maintainAspectRatio: false,
       elements: {
         arc: {
-          borderColor: 'transparent' // Optionally set border color if needed
+          borderColor: 'transparent'
         }
       }
     });
@@ -74,7 +74,7 @@ export default {
         plugins: {
           legend: {
             labels: {
-              color: 'white' // Change legend label color to white
+              color: 'white'
             }
           },
           tooltip: {
@@ -85,7 +85,7 @@ export default {
                 return `${label}: ${value}`;
               }
             },
-            // Change tooltip text color to white
+
             bodyColor: 'white',
             titleColor: 'white'
           }
@@ -94,7 +94,7 @@ export default {
         maintainAspectRatio: false,
         elements: {
           arc: {
-            borderColor: 'transparent' // Optionally set border color if needed
+            borderColor: 'transparent' 
           }
         }
       });
