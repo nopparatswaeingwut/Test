@@ -17,7 +17,7 @@ export default {
   },
   data() {
     return {
-      chartData : {
+      chartData: {
         labels: [],
         datasets: [{
           label: 'Act_Weight',
@@ -73,7 +73,6 @@ export default {
     dataArea(newVal) {
       this.updateChart(newVal, this.actWeight);
     },
-
   },
   mounted() {
     this.renderChart(this.chartData, this.options);
@@ -95,10 +94,10 @@ export default {
   }
 };
 </script>
-
 <style scoped>
 canvas {
   width: 100% !important;
   height: auto !important;
+
 }
 </style>

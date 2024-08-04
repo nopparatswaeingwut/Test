@@ -190,7 +190,7 @@ h2 {
 /* Responsive Design */
 @media (max-width: 768px) {
   table {
-    display: block;
+
     width: 100%;
   }
 
@@ -210,7 +210,6 @@ h2 {
 
   tr {
     display: block;
-    margin-bottom: 20px;
   }
 
   td {
