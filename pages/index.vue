@@ -12,14 +12,15 @@
             <h2>Machine Details Area</h2>
             <div v-if="this.dataSets.length > 0">
             <img src="/product.jpg" class="imageProduct" alt="Product Image">
-            <p>Label: {{ machine.Tagname }}</p>
-            <GaugeChart  class="imageProduct" :data="[randomNumber]" />
-            <p>Gauge Speed:  {{ randomNumber }}</p>
+            <GaugeChart  class="Chart" :data="[randomNumber]" />
+            <p><strong>Label:</strong> {{ machine.Tagname }}</p>
+
+            <p><strong> Gauge Speed:</strong>  {{ randomNumber }}</p>
             <p class="Detail">Details</p>
             <div >
               <p><strong>OrderNumber:</strong> {{ machine.OrderNumber }}</p>
               <p><strong>SemiBatch:</strong> {{ machine.SemiBatch }}</p>
-              <p><strong>Act_Weight:</strong> {{ machine.Act_Weight }}</p>
+              <!-- <p><strong>Act_Weight:</strong> {{ machine.Act_Weight }}</p> -->
               <p><strong>DateTime:</strong> {{ machine.DateTime }}</p>
             </div>
             </div>
@@ -30,9 +31,7 @@
           <td class="storage-area">
             <h2>Storage Area</h2>
             <div v-if="this.dataSets.length > 0">
-            <GaugeChartArea  class="imageProduct" :dataArea="this.machine.Material" />
-            <p class="pt-5">Storage Label: {{ machine.Material }}</p>
-            <p>Storage Level: {{ machine.Act_Inv }}</p>
+            <GaugeChartArea  class="" :dataArea="this.machine.Material" :actWeight="this.machine.Act_Weight" />
             </div>
             <div v-else>
               <p>No data</p>
@@ -156,16 +155,21 @@ td {
   padding: 20px;
 }
 
-
 .imageProduct {
   width: 30%;
   height: auto;
+
 }
-.storage-area{
-  width: 40%;
+
+.Chart{
+  width: 35%;
   height: auto;
 }
 
+.storage-area {
+  width: 40%;
+  height: auto;
+}
 
 h2 {
   text-align: center;
@@ -175,13 +179,61 @@ h2 {
 .machine-details, .storage-area {
   background-color: #fff;
   color: #000000;
-
 }
+
 .Detail {
   font-weight: bold;
   font-size: 1.5em;
   margin-bottom: 15px;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  table {
+    display: block;
+    width: 100%;
+  }
 
+  thead {
+    display: block;
+    width: 100%;
+  }
+
+  th {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: #c40b0b;
+    color: #fff;
+    font-size: 1.5em;
+  }
+
+  tr {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .imageProduct {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .Chart{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .machine-details, .storage-area {
+    width: 100%;
+    display: block;
+  }
+}
 </style>
