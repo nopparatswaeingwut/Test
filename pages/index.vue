@@ -156,12 +156,11 @@ td {
 }
 
 .imageProduct {
-  width: 30%;
+  width: 16vw; /* ใช้ vw แทน % */
   height: auto;
-
 }
 
-.Chart{
+.Chart {
   width: 35%;
   height: auto;
 }
@@ -190,7 +189,6 @@ h2 {
 /* Responsive Design */
 @media (max-width: 768px) {
   table {
-
     width: 100%;
   }
 
@@ -224,15 +222,18 @@ h2 {
     height: auto;
     margin-bottom: 20px;
   }
-  .Chart{
+
+  .Chart {
     width: 100%;
     max-width: 400px;
     height: auto;
     margin-bottom: 20px;
   }
+
   .machine-details, .storage-area {
     width: 100%;
     display: block;
   }
 }
 </style>
+
