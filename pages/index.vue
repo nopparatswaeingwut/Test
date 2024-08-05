@@ -31,7 +31,7 @@
           <td class="storage-area">
             <h2>Storage Area</h2>
             <div v-if="this.dataSets.length > 0">
-            <GaugeChartArea  class="" :dataArea="this.machine.Material" :actWeight="this.machine.Act_Weight" />
+            <GaugeChartArea  :dataArea="machine.Material" :actWeight="machine.Act_Weight" />
             </div>
             <div v-else>
               <p>No data</p>

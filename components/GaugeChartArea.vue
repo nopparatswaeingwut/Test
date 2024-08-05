@@ -7,11 +7,11 @@ export default {
   extends: Bar,
   props: {
     dataArea: {
-      type: String,
+      type: null,
       required: true
     },
     actWeight: {
-      type: Number,
+      type: null,
       required: true
     }
   },
