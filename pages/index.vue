@@ -13,14 +13,12 @@
             <div v-if="this.dataSets.length > 0">
             <img src="/product.jpg" class="imageProduct" alt="Product Image">
             <GaugeChart  class="Chart" :data="[randomNumber]" />
-            <p><strong>Label:</strong> {{ machine.Tagname }}</p>
-
             <p><strong> Gauge Speed:</strong>  {{ randomNumber }}</p>
             <p class="Detail">Details</p>
             <div >
+              <p><strong>Label:</strong> {{ machine.Tagname }}</p>
               <p><strong>OrderNumber:</strong> {{ machine.OrderNumber }}</p>
               <p><strong>SemiBatch:</strong> {{ machine.SemiBatch }}</p>
-              <!-- <p><strong>Act_Weight:</strong> {{ machine.Act_Weight }}</p> -->
               <p><strong>DateTime:</strong> {{ machine.DateTime }}</p>
             </div>
             </div>
@@ -156,7 +154,7 @@ td {
 }
 
 .imageProduct {
-  width: 16vw; /* ใช้ vw แทน % */
+  width: 16vw;
   height: auto;
 }
 
@@ -186,7 +184,6 @@ h2 {
   margin-bottom: 15px;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   table {
     width: 100%;

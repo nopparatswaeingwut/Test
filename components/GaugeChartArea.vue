@@ -20,7 +20,7 @@ export default {
       chartData: {
         labels: [],
         datasets: [{
-          label: 'Act_Weight',
+          label: 'Act Weight',
           data: [],
           backgroundColor: ['#00FF66', '#00BFFF', '#FF6347'],
           borderColor: '#000',
